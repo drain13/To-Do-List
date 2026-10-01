@@ -41,7 +41,7 @@ export default function App() {
   const completed = tasks.filter((task) => task.completed).length;
 
   return <div className="min-h-screen"><Header /><main className="mx-auto max-w-5xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
-    <section className="rounded-xl bg-white p-6 shadow-md sm:p-8"><h2 className="text-2xl font-bold text-green-800 sm:text-3xl">To-Do List Interface</h2><p className="mt-2 text-gray-600">A simple task manager created by a student using React and Tailwind CSS.</p>
+    <section className="rounded-xl bg-white p-6 shadow-md sm:p-8"><h2 className="text-2xl font-bold text-green-800 sm:text-3xl">To-Do List Interface</h2><p className="mt-2 text-gray-600">A simple task manager created using React and Tailwind CSS.</p>
       <div className="mt-6"><TaskForm taskInput={taskInput} setTaskInput={setTaskInput} addTask={addTask} /></div>
       <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3"><div className="rounded-lg bg-blue-50 p-4 text-center"><p className="text-2xl font-bold text-blue-700">{tasks.length}</p><p className="text-sm text-gray-600">Total Tasks</p></div><div className="rounded-lg bg-green-50 p-4 text-center"><p className="text-2xl font-bold text-green-700">{completed}</p><p className="text-sm text-gray-600">Done</p></div><div className="rounded-lg bg-yellow-50 p-4 text-center"><p className="text-2xl font-bold text-yellow-700">{tasks.length - completed}</p><p className="text-sm text-gray-600">Not Done</p></div></div>
       <div className="mt-6 flex items-center justify-between"><h3 className="text-xl font-bold text-gray-800">Task List</h3><button onClick={() => setTasks([])} className="rounded-md bg-gray-700 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">Clear All</button></div>
